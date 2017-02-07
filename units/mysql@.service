@@ -1,0 +1,9 @@
+[Unit]
+Description=MySQL: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=sameersbn/mysql'
+
+# Setup the volume
+Environment='DOCKER_VOLUME_VAR_LIB_MYSQL=/srv/docker/mysql/instance/%i/data:/var/lib/mysql'
